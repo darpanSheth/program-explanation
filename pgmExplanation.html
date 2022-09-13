@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dapan">
+    <meta name="description" content="Age category program explanation">
+    <title>Programe explanation</title>
+    <style>
+        h1{text-align: center;}
+        hr{width: 80%;}
+        p{margin-bottom: 0;}
+        h4{margin-bottom: 0;}
+        pre{margin-top: 0;}
+        span{color: red;}
+        blockquote{margin-bottom: 0;}
+        div{
+            text-align: right;
+            margin-right: 10%;
+        }
+    </style>
+</head>
+<body>
+<h1>Age category programe explanation</h1>
+<hr>
+<p> 
+    <strong><u> Explanation for the Javacript code fragment given below :-</u></strong><br>
+    Basically, this program gives us the category in which a person fall on the basis of their age. 
+    Firstly, It defines a variable <var>checkAgeCategory</var> and asks the user for some input.<br>
+    Than, it converts the String to a Number using numberFormat since the user input from prompt window 
+    is always in the form of <abbr title="Group of zero or more characters enclosed in &quot;&quot;">"String"</abbr><br>
+    Based on user's input, it will give the output defining the person's category by using 
+    <dfn>if, else-if, else</dfn> conditional statements that varies output for different conditions.<br><br>
+    If the <var>checkAgeCategory</var> is  <kbd>(&le;12)</kbd>, output will be <samp>"You are still a child!"</samp><br>
+    If the <var>checkAgeCategory</var> is  <kbd>(&gt;12 & &le;19)</kbd>, output will be <samp>"You are a teenager!"</samp><br>
+    If the <var>checkAgeCategory</var> is  <kbd>(&gt;19 & &lt;60)</kbd>, output will be <samp>"You are an adult!"</samp><br>
+    If the <var>checkAgeCategory</var> is  <kbd>(&ge;60)</kbd>, output will be <samp>"You are a senior adult!"</samp>
+</p>
+<h4><u>Javascript code :</u></h4>
+<pre><code>
+    let checkAgeCategory = prompt("Please enter you age");   //Prompts user for the age input
+    checkAgeCategory = Number(checkAgeCategory);             //Converts String input to a Number
+    
+    if(checkAgeCategory >= 60){
+        alert("You are a senior adult");
+    }
+    else if(checkAgeCategory > 19){
+        alert("You are an adult!");
+    }
+    else if(checkAgeCategory > 12){
+        alert("You are a teenager");
+    }
+    else{
+        alert("You are still a child!");
+    }
+</code></pre>
+<p>
+    <span><b>Please note:</b></span> <mark><i>While using if, else-if statements, the programe will terminate if the first condition is true.</i></mark><br>
+    That is why we have checked the <ins>higher age condition</ins> first in our code and not the <del>lower age condition</del>. <br><br>
+    For instance- If we checked the (checkAgeCategory > 12) condition first, output for teenager would only be displayed.<br>
+    And our programe will not take the fact into consideration that this person could also be an adult or a senior adult.<br>
+    So, sometimes the programming logic seems to be simple but it is not often as easy as it seems.<br><br>
+    This reminds me of a great saying by a great programmer which is stated as follows-:
+</p>
+<blockquote cite="https://www.overallmotivation.com/quotes/programming-quotes/">
+    <q>Everyone knows that debugging is twice as hard as writing a program in the first place. So if you’re as clever as you can be when you write it, how will you ever debug it?</q>
+</blockquote>
+<div><strong>--Brian Kernighan</strong></div>
+</body>
+</html>
